@@ -1,0 +1,22 @@
+import time
+
+client = "Alice"
+server = "FileServer"
+
+timestamp = time.time()
+
+ticket = {
+    "client": client,
+    "server": server,
+    "time": timestamp
+}
+
+print("Ticket Generated:")
+print(ticket)
+
+current_time = time.time()
+
+if current_time - ticket["time"] < 60:
+    print("Ticket Valid. Access Granted.")
+else:
+    print("Ticket Expired.")
