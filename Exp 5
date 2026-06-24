@@ -1,0 +1,17 @@
+issuer = input("Enter Issuer Name: ")
+subject = input("Enter Subject Name: ")
+valid_from = input("Valid From (DD/MM/YYYY): ")
+valid_to = input("Valid To (DD/MM/YYYY): ")
+public_key = input("Enter Public Key: ")
+
+print("\n----- Certificate Details -----")
+print("Issuer:", issuer)
+print("Subject:", subject)
+print("Valid From:", valid_from)
+print("Valid To:", valid_to)
+print("Public Key:", public_key)
+
+if issuer != "" and subject != "" and public_key != "":
+    print("\nCertificate is Valid and Trusted.")
+else:
+    print("\nCertificate Validation Failed.")
